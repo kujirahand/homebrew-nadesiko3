@@ -11,7 +11,10 @@
 ### 1. タップの追加
 
 ```bash
+# tapを追加します
 brew tap kujirahand/nadesiko3
+# tapを信頼します
+brew trust kujirahand/nadesiko3
 ```
 
 ### 2. インストール
