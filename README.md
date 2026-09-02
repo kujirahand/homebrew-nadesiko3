@@ -32,10 +32,14 @@ gonako -e '「こんにちは」と表示'
 ```
 
 #### GUI版 (`gonako-gui`)
+
 日本語IMEに対応した軽量WebViewベースのエディタ＆実行環境です。`/Applications/なでしこ3.app` にインストールされます。
 
 ```bash
+# ダウンロード
 brew install --cask gonako-gui
+# Gatekeeperのブロックを解除
+xattr -cr /Applications/なでしこ3.app
 ```
 
 ---
@@ -46,6 +50,8 @@ brew install --cask gonako-gui
 brew update
 brew upgrade gonako
 brew upgrade --cask gonako-gui
+# Gatekeeperのブロックを解除
+xattr -cr /Applications/なでしこ3.app
 ```
 
 ## アンインストール
