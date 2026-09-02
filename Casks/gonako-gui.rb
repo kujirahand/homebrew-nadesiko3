@@ -15,6 +15,11 @@ cask "gonako-gui" do
 
   app "gonako-gui-#{version}-darwin-#{Hardware::CPU.arm? ? "arm64" : "amd64"}.app", target: "なでしこ3.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/なでしこ3.app"]
+  end
+
   zap trash: [
     "~/Library/Saved Application State/com.nadesiko3.gonako.gui.savedState",
   ]
