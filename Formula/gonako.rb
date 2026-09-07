@@ -1,32 +1,30 @@
 class Gonako < Formula
   desc "日本語プログラミング言語 なでしこ3 (Go言語版)"
   homepage "https://github.com/kujirahand/nadesiko3go"
-  version "3.8.1"
+  version "3.8.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-darwin-arm64"
-      sha256 "dd6218bcb28e3406356b051350530c1082fae62b70399e429fed9de0f6ab9c27"
+      url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-darwin-arm64.zip"
+      sha256 "7ed8cb85f81d22f16952cfd2e7d9f4967328d52fc5568d05242a1e535094a6a7"
     else
-      url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-darwin-amd64"
-      sha256 "c73a41a438f67d32c2da912997aa0652a20cbd13154141d6be26f9f94fc56cbf"
+      url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-darwin-amd64.zip"
+      sha256 "5be2f9262410ea06f8361a8c3fe17f4ee2d9e0dfd524c145fd5adc0680a793a7"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-linux-arm64"
-      sha256 "8afb627a44106f394c35295941842271264739eecc77a6cd348304e1b84895a1"
+      url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-linux-arm64.zip"
+      sha256 "8d466dfa2673c5ea2c04404d25e043cde03d83608360be1a26ef79f2334b8692"
     else
-      url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-linux-amd64"
-      sha256 "1dcac44e6a9b1b42587d7824010dda5ce8e726521750c2ae18f1313acddfefa9"
+      url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-linux-amd64.zip"
+      sha256 "9040e090ccd83e3be918e5681eada45de03b3d369fe05764e754cbd24995f129"
     end
   end
 
   def install
-    cpu = Hardware::CPU.arm? ? "arm64" : "amd64"
-    os = OS.mac? ? "darwin" : "linux"
-    bin.install "gonako-#{version}-#{os}-#{cpu}" => "gonako"
+    bin.install "gonako"
   end
 
   test do
