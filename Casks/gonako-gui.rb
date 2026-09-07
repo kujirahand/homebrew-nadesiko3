@@ -13,10 +13,10 @@ cask "gonako-gui" do
   desc "日本語プログラミング言語 なでしこ3 GUIエディタ＆実行環境"
   homepage "https://github.com/kujirahand/nadesiko3go"
 
-  app "gonako-gui-#{version}-darwin-#{Hardware::CPU.arm? ? "arm64" : "amd64"}.app", target: "なでしこ3.app"
+  app "gonako-gui-#{version}-darwin-#{Hardware::CPU.arm? ? "arm64" : "amd64"}.app", target: "gonako-gui.app"
 
   postflight_steps do
-    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/なでしこ3.app"]
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/gonako-gui.app"]
   end
 
   zap trash: [
