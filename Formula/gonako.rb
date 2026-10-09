@@ -1,25 +1,25 @@
 class Gonako < Formula
   desc "日本語プログラミング言語 なでしこ3 (Go言語版)"
   homepage "https://github.com/kujirahand/nadesiko3go"
-  version "3.8.6"
+  version "3.8.9"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-darwin-arm64.zip"
-      sha256 "d0df5042a811dd363be9e20be5c90fc86f26368532009ce2351437f44a5c038a"
+      sha256 "6cb68d39634ec051c4c6afbf7c48d1c47e0ea2137b85531f43320725e638f034"
     else
       url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-darwin-amd64.zip"
-      sha256 "e6763634f9f5f90281b6e345b6dcc1190c3cd22d0ee1f53c236456b821b0ff45"
+      sha256 "4bd12a84280c03652c8daeeee1eeec7078f4014cd3c36c70803316136948eda5"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-linux-arm64.zip"
-      sha256 "d96de795eb534c91b82c65be702bae85377ff000d02c6e1141792c83657f9d09"
+      sha256 "68a5d37d167d2268502935e34d2660e3e92d027e84098b69952c626f2805e120"
     else
       url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-#{version}-linux-amd64.zip"
-      sha256 "f9445f13bbda9930b894839d9c2a85f6007689573a83c9f489b2d1140a5df263"
+      sha256 "fbe47f9c587bbc009e5653b5bc2fa13cef4bc7ce077736c32e04d81aaa03c182"
     end
   end
 
