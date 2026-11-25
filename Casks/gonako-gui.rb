@@ -1,12 +1,12 @@
 cask "gonako-gui" do
-  version "3.8.11"
+  version "3.8.12"
 
   if Hardware::CPU.arm?
     url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-gui-#{version}-darwin-arm64.app.zip"
-    sha256 "bfec93017cdba5ebc53a79fc13143a7f0646b7f031b2042ec5aeccd16ff80132"
+    sha256 "013c16106e159040cbc0ae18f4e33ef86c89adfb20df237eb3a732ef1dae33c8"
   else
     url "https://github.com/kujirahand/nadesiko3go/releases/download/#{version}/gonako-gui-#{version}-darwin-amd64.app.zip"
-    sha256 "b5c7b862832894d0010dab349c3421d0b49976c5c7678153fe3d5d4de9c1fa9f"
+    sha256 "dcd1dac12322fbd1ba6491ed9bdd1c0f3ecbb3ba12c0fc9e5068a32321db3a4c"
   end
 
   name "なでしこ3 (gonako-gui)"
